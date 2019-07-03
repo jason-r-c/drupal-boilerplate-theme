@@ -1,0 +1,9 @@
+name = Boilerplate
+description = Starter theme designed for giving the developer more flexibility
+version = 1.2.3
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/theme.css
+stylesheets[print][] = css/print.css
+scripts[] = js/bootstrap.min.js
