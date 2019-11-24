@@ -1,4 +1,4 @@
-##Setting up the Boilerplate theme for a Drupal site
+## Setting up the Boilerplate theme for a Drupal site
 Change the boilerplate_theme folder name to the name of the site you're working on:  
 
 * boilerplate_theme  
@@ -16,7 +16,7 @@ Open up template.php and rename the function name as follows:
 would be changed to   
 * my_theme_name_preprocess_page
 
-##LESS file structue
+## LESS file structue
 The file structure at my_theme_name/less is inspired by the [Bootstrap][bootstrap on github] project on Github:   
 
 * bootstrap-less folder
@@ -32,10 +32,10 @@ theme.less will be compiled to the folder css/theme.css. We dont need to compile
 
 All the files in the bootstrap-less folder are directly copied from [Bootstrap][bootstrap on github]
 
-##Compiling LESS using Gulp.js
+## Compiling LESS using Gulp.js
 It is easier and quicker to compile your themes LESS files using the [production front end build process][gulpjs]. However if you are more comfortable with using a separate program (see below).
 
-##Compiling LESS using a GUI application
+## Compiling LESS using a GUI application
 You will need a LESS compiler such as [Koala][koala less app] or [WinLESS][winless less app]  
 
 Drag and drop the entire my_theme_name folder into the application.
@@ -50,31 +50,31 @@ This is because:
 * We will need to edit theme-variables.less and save this file in our text editors: But we dont need to compile it as its being included in our theme.less file. If you accidently compile theme-variables.less its not a problem, you simply get a blank css file with the same name which can be deleted with out any negative impact.
 * Compiling a less file: If you compile a less file a css file with the same name will be created.
 
-##Starting out using the LESS language
+## Starting out using the LESS language
 To begin with, you will most likely find using Variables, Mixins and Nesting and possibly Operations easiest to work with. See this [beginners guide][less beginners guide]. A comprehensive listing can be found [here][less comprehensive listing].
 
-##Working with the Boilerplate theme
+## Working with the Boilerplate theme
 It is designed to be minimal so that it gives the developer more freedom to choose what they want/need to do. It has a copied version of the Drupal cores' page.tpl.php (with minor modifications) and node.tpl.php.
 
 It also has the Bootstrap parent themes' template files for common Landscape Content types.
 
-###Regions
+### Regions
 If no regions are defined, the theme defaults to left sidebar, right sidebar, content, header and footer. Custom regions will override the defaults.
 
 See [default .info values][default .info values] for more information.
 
-##For responsive migrations
+## For responsive migrations
 One strategy would be to use the same regions that was used in the previous theme and assign the same blocks to those regions.
 
 Then apply boostrap classes such col-xs-12 (see [getbootstrap.com][bootstrap css home page]) to page.tpl and any necessary Drupal blocks.
 
 You could also use live browser editors such [bootstrap-live-customizer.com][bootstrap live customizer]. This tool allows you to edit variables, as well as download complete customised variables.less, theme.less and bootstrap.css.
 
-##Useful Information
+## Useful Information
 * [Drupal 6 Global variables]
 * [Drupal 6 Function reference]
 
-##Troubleshooting
+## Troubleshooting
 If you get into a mess, you can remove all the css files from the css folder.
 
 Compile the boostrap.less file at less/bootstrap.less. This file contains all the Bootstrap classes you need for working with the Bootstrap framework.
